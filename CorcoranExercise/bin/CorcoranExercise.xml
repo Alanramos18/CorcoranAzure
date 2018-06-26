@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CorcoranExercise</name>
+    </assembly>
+    <members>
+        <member name="T:CorcoranExercise.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="P:CorcoranExercise.UnityConfig.Container">
+            <summary>
+            Configured Unity Container.
+            </summary>
+        </member>
+        <member name="M:CorcoranExercise.UnityConfig.RegisterTypes(Unity.IUnityContainer)">
+            <summary>
+            Registers the type mappings with the Unity container.
+            </summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+            There is no need to register concrete types such as controllers or
+            API controllers (unless you want to change the defaults), as Unity
+            allows resolving a concrete type even if it was not previously
+            registered.
+            </remarks>
+        </member>
+        <member name="T:CorcoranExercise.UnityWebApiActivator">
+            <summary>
+            Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET.
+            </summary>
+        </member>
+        <member name="M:CorcoranExercise.UnityWebApiActivator.Start">
+            <summary>
+            Integrates Unity when the application starts.
+            </summary>
+        </member>
+        <member name="M:CorcoranExercise.UnityWebApiActivator.Shutdown">
+            <summary>
+            Disposes the Unity container when the application is shut down.
+            </summary>
+        </member>
+        <member name="T:CorcoranExercise.Models.ViewModel.SortVM">
+            <summary>
+            ViewModel for Sort Service
+            </summary>
+        </member>
+        <member name="M:CorcoranExercise.Repositories.Interfaces.IPresidentRepository.GetAll">
+            <summary>
+            Bring the list of president
+            </summary>
+            <returns>List of President Entity</returns>
+        </member>
+        <member name="M:CorcoranExercise.Repositories.Interfaces.IPresidentRepository.Get(System.String)">
+            <summary>
+            Get Presidents filter by name string
+            </summary>
+            <param name="name">Name of the president</param>
+            <returns>President Entity</returns>
+        </member>
+        <member name="M:CorcoranExercise.Repositories.Interfaces.IPresidentRepository.ChangeOrder(CorcoranExercise.Models.ViewModel.SortVM)">
+            <summary>
+            Sort the list by Birthday/Deathday depending the string on the parameter.
+            </summary>
+            <param name="viewModel">SortVM: Contains Enum ColumnName and bool IsAscending</param>
+            <returns>List of president ordered</returns>
+        </member>
+    </members>
+</doc>
